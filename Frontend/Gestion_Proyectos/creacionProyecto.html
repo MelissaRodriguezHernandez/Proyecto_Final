@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/O_imagen_pestaña.png">
+    <link href="css/creacionProyecto.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Crear Proyecto</title>
+</head>
+<body>
+    <header>
+        <navbar>
+            <ul>
+                <li class="marca"><a href="home.html">ONYX</a></li>
+                <li class="cuenta"><a href="cuenta.html"><i class="icon icon-user-circle-o"></i></a></li>
+                <li class="contacto"><a href="contacto.html">Contacto</a></li>
+                <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i></a></li>
+            </ul>
+        </navbar>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend><h1>Creación de proyecto</h1></legend>
+                <label for="nombre_proyecto">Nombre del proyecto</label><br>
+                <input type="text" id="nombre_proyecto" name="nombre_proyecto" minlength="10" maxlength="45" required><br><br>
+                <label for="descripcion_proyecto">Descripción del proyecto</label><br>
+                <input type="text" id="descripcion_proyecto" name="descripcion" minlength="10" maxlength="45" required><br><br>
+                <label for="tipo_proyecto">Elige el tipo de proyecto: </label><br>
+                <select id="tipo_proyecto" name="tipo_proyecto" required>
+                    <option value="Personal">Personal</option>
+                    <option value="Estudios">Estudios</option>
+                    <option value="Trabajo">Trabajo</option>
+                </select><br><br>
+                <label for="fecha_inicio">Fecha de inicio</label><br>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" required><br><br>
+                <label for="fehca_final">Fecha final</label><br>
+                <input type="date" id="fehca_final" name="fehca_final" required><br><br>
+            </fieldset>
+            <button class="boton_proyecto" type="button" onclick="crearProyecto()"><a href="home.html">Crear proyecto</a></button>
+        </form>
+    </main>
+    <script src="crearProyecto.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/O_imagen_pestaña.png">
+    <link href="css/registro.css" rel="stylesheet" type="text/css">
+    <title>ONYX</title>
+     
+</head>
+<body>
+<header>
+    <navbar>
+        <ul>
+            <li class="marca"><a href="index.html">ONYX</a></li>
+            <li class="inicio"><a href="login.html">Iniciar Sesión</a></li>
+        </ul>
+    </navbar>
+</header>
+<main>
+    <form >
+        <fieldset>
+            <legend><h1>Registro</h1></legend>
+            <label for="nombre">Nombre </label><br>
+            <input type="text" id="nombre" name="nombre"  minlength="10" maxlength="15" required><br><br>
+            <label for="apellidos">Apellidos </label><br>
+            <input type="text" id="apellidos" name="apellidos" maxlength="40" minlength="10" required><br><br>
+            <label for="email_primero">Email </label><br>
+            <input type="text" id="email_primero" name="email_primero" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" maxlength="40" minlength="20" required><br><br>
+            <label for="contraseña_primero">Contraseña </label><br>
+            <input type="text" id="contraseña_primero" name="contraseña_primero" minlength="10" maxlength="40" required><br><br>
+            <label class="terminos" for="terminos"> <input type="checkbox" id="terminos" name="terminos" required>Acepto <a href="">Términos y Condiciones</a></label><br><br>
+            <button class="boton_enviar" onclick="enviarRegistro()"> Enviar</button>
+        </fieldset>
+    </form>  
+</main>
+	<script src="js.js"></script>
+</body>
+</html>

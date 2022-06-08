@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/O_imagen_pestaña.png">
+        <link href="css/crearTarea.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <title>Añadir Tarea</title>
+    </head>
+    <body onload="cargarInfoForm()">
+        <header>
+            <navbar>
+                <ul>
+                    <li class="marca"><a href="home.html">ONYX</a></li>
+                    <li class="cuenta"><a href="cuenta.html"><i class="icon icon-user-circle-o"></i></a></li>
+                    <li class="contacto"><a href="contacto.html">Contacto</a></li>
+                    <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i></a></li>
+                </ul>
+            </navbar>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend><h1>Añadir Tarea</h1></legend>
+                    <label for="nombre_tarea">Nombre </label><br>
+                    <input type="text" id="nombre_tarea" name="nombre_tarea" minlength="10" maxlength="45" required><br><br>
+                    <label for="descripcion_tarea">Descripcion</label><br>
+                    <input type="text" id="descripcion_tarea" name="descripcion_tarea"><br><br>
+                    <label for="id_participante">Introduce el id de la persona </label><br>
+                    <select id="id_participante" name="id_participante" minlength="10" maxlength="45" required>
+                        <option></option>
+                    </select><br><br>
+                    <label for="fecha_tarea">Fecha entrega</label><br>
+                    <input type="date" id="fecha_tarea" name="fecha_tarea" required><br><br>
+                    <label for="fases">Elige fase </label><br>
+                    <select id="fases" name="fase_tarea" required>
+                        <option value="id">Fase 1</option>
+                    </select><br>
+                </fieldset>
+                <button class="boton" type="button" onclick="crearTarea()"><a href="proyecto.html">Añadir Tarea</a></button>
+            </form>
+        </main>
+        <script src="crearProyecto.js"></script>
+    </body>
+</html>

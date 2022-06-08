@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/O_imagen_pestaña.png">
+        <link href="css/contacto.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js.js"></script>
+        <title>ONYX</title>
+    </head>
+    <body>
+        <header>
+            <navbar>
+                <ul>
+                    <li class="marca"><a href="home.html">ONYX</a></li>
+                    <li class="cuenta"><a href="cuenta.html"><i class="icon icon-user-circle-o"></i></a></li>
+                    <li class="contacto"><a href="contacto.html">Contacto</a></li>
+                    <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i></a></li>
+                </ul>
+            </navbar>
+        </header>
+        <main >
+            <form>
+                <fieldset>
+                    <legend><h1>Contacto/Reclamaciones</h1></legend>
+                    <label for="titulo">Título</label><br>
+                    <input type="text" id="titulo" name="titulo" minlength="10" maxlength="15" required><br><br>
+                    <label for="tipo_problema">Tipo de problema</label><br>
+                    <select id="tipo_problema" name="tipo_problema" required><br>
+                    	<option value="usuario">Usuario</option>
+                    	<option value="proyecto">Proyecto</option>
+                    	<option value="otros">Otros</option>
+                    </select><br><br>
+                    <label for="texto">Descripción del problema</label><br>
+                    <textarea rows="4" cols="50" name="coemntario" id="texto" required>Introduce el texto aquí...</textarea><br><br>
+                    <button class="boton_s" type="button" onclick="enviar_reclamacion()"><a href="home.html">Enviar</a></button>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>

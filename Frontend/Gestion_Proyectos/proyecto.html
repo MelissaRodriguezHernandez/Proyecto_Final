@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/O_imagen_pestaña.png">
+        <link href="css/proyecto.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <title>ONYX</title>
+    </head>
+    <body onload="cargarProyecto()">
+        <header>
+            <navbar>
+                <ul>
+                    <li class="marca"><a href="home.html">ONYX</a></li>
+                    <li class="cuenta"><a href="cuenta.html"><i class="icon icon-user-circle-o"></i></a></li>
+                    <li class="contacto"><a href="contacto.html">Contacto</a></li>
+                    <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i>Crear</a></li>
+                </ul>
+            </navbar>
+        </header>
+        <main class="contenedor">
+            <section class="infoProyecto" id="infoProyecto">
+                <div>
+                    <h3>Id | <h2>400</h2></h3><br><br>
+                    <h3>Nombre | <h2>Proyecto2</h2></h3><br><br>
+                    <h3>Tipo | <h2>Personal</h2></h3><br><br>
+                    <h3>Estato | <h2>Pendiente</h2></h3><br><br>
+                </div>
+                <div>
+                    <h3>Cantidad de fases | <h2>4</h2></h3><br><br>
+                    <h3>Cantidad de tareas | <h2>50</h2></h3><br><br>
+                    <h3>Cantidad de participantes | <h2>3</h2></h3><br><br>
+                </div>
+                <div>
+                    <h3>| Descripcion |</h3>
+                    <h2>Proyecto descripcion especifica</h2>
+                </div>
+                <div>
+                    <a href="documento.html" target="_blank"><i class="icon icon-file" id="icon"></i></a>
+                </div>
+            </section>
+            <section class="contedor_tareas_calen">
+                <section class="tareas" id="tareas">
+                    <h1>Tareas</h1>
+                    <div>
+                        <div class="contenido_fases" id="tareasUsuario">
+                            <button class="fase_drop" id="fase_drop"  >Fase 1<i class="icon icon-angle-double-down" ></i></button>
+                            <ul class="tareas_drop">
+                                <h4 >tarea 1 | fecha limite : <i class="icon icon-square-o"  onclick="cambiarEstadoTarea()"></i><br><span> descripcion de la tarea</span></h4>
+                                <h4>tarea 2 <i class="icon icon-square-o"></i></h4>
+
+                                <h4>tarea 3<i class="icon icon-square-o"></i></h4>
+                            </ul>
+                            <button class="fase_drop" onmouseover="drop()">Fase 2<i class="icon icon-angle-double-down"></i></button>
+                            <ul class="tareas_drop">
+                                <h4>tarea 1<i class="icon icon-square-o"></i></h4>
+                                <h4>tarea 2<i class="icon icon-square-o"></i></h4>
+                                <h4>tarea 3<i class="icon icon-square-o"></i></h4>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="calendar" id="calendar">
+                    <div >
+                        <div class="calendar__info">
+                            <div class="calendar__prev" id="prev-month">&#9664;</div>
+                            <div class="calendar__month" id="month"></div>
+                            <div class="calendar__year" id="year"></div>
+                            <div class="calendar__next" id="next-month">&#9654;</div>
+                        </div>
+
+                        <div class="calendar__week">
+                            <div class="calendar__day calendar__item">Lun</div>
+                            <div class="calendar__day calendar__item">Mar</div>
+                            <div class="calendar__day calendar__item">Mie</div>
+                            <div class="calendar__day calendar__item">Jue</div>
+                            <div class="calendar__day calendar__item">Vie</div>
+                            <div class="calendar__day calendar__item">Sab</div>
+                            <div class="calendar__day calendar__item">Dom</div>
+                        </div>
+                        <div class="calendar__dates" id="dates"></div>
+                    </div>
+                </section>
+            </section>
+            <section class="añadir_partes">
+                <div class="fases_añadir">
+                    <div id="fases_proyecto">
+                        <h5>Fases</h5>
+                        <h6>Fase 1</h6>
+                        <h6>Fase 2</h6>
+                    </div>
+                    <div class="div_botones">
+                        <button class="boton_añadir" type="button" ><a href="crearFase.html">Añadir fase</a></button>
+                        <button class="boton_añadir" type="button" ><a href="borrarFase.html">Eliminar fase</a></button>
+                    </div>
+                </div>
+                <div class="participante_añadir">
+                    <div id="participantes_proyecto">
+                        <h5>Participantes</h5>
+                        <h6>Participante 1</h6>
+                        <h6>Participante 2</h6>
+                    </div>
+                    <div class="div_botones">
+                        <button class="boton_añadir" type="button"><a href="crearParticipante.html">Añadir participante</a></button>
+                        <button class="boton_añadir" type="button" ><a href="borrarParticipante.html">Eliminar participante</a></button>
+                    </div>
+                </div>
+                <div  class="tarea_añadir">
+                    <div id="tarea_proyecto">
+                        <h5>Tareas</h5>
+                        <h6>Tarea 1</h6>
+                        <h6>Tarea 2</h6>
+                    </div>
+                    <div class="div_botones">
+                        <button class="boton_añadir" type="button"><a href="crearTarea.html">Añadir tarea</a></button>
+                        <button class="boton_añadir" type="button" ><a href="borrarTarea.html">Eliminar tarea</a></button>
+                    </div>
+                </div>
+            </section>
+            <button type="button" class="boton_eliminar" onclick="eliminarProyecto()"><a href="home.html">Eliminar proyecto</a></button>
+        </main>
+        <script type="text/javascript" src="crearProyecto.js"></script>
+    </body>
+</html>

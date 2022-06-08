@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/O_imagen_pestaña.png">
+        <link href="css/crearParticipante.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <title>Añadir Participante</title>
+    </head>
+    <body>
+        <header>
+            <navbar>
+                <ul>
+                    <li class="marca"><a href="home.html">ONYX</a></li>
+                    <li class="cuenta"><a href="cuenta.html"><i class="icon icon-user-circle-o"></i></a></li>
+                    <li class="contacto"><a href="contacto.html">Contacto</a></li>
+                    <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i></a></li>
+                </ul>
+            </navbar>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend><h1>Añadir participante</h1></legend>
+                    <label for="participante">Introduce el identificador de la personas <i class="icon icon-info-circle" onmouseover=""></i>(se encuentra en la información de cuenta)</label>
+                    <input type="text" id="participante" name="participante" maxlength="4" minlength="4" required><br><br>
+                </fieldset>
+                <button class="boton" type="button" onclick="crearParticipante()"><a href="proyecto.html">Añadir Participante</a></button>
+            </form>
+        </main>
+    <script src="crearProyecto.js"></script>
+    </body>
+</html>

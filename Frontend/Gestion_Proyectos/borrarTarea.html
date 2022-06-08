@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/O_imagen_pestaña.png">
+        <link href="css/borrar.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <title>Eliminar Tarea</title>
+    </head>
+    <body onload="cargarInfoForm()">
+        <header>
+            <navbar>
+                <ul>
+                    <li class="marca"><a href="home.html">ONYX</a></li>
+                    <li class="cuenta"><a href="cuenta.html"><i class="icon icon-user-circle-o"></i></a></li>
+                    <li class="contacto"><a href="contacto.html">Contacto</a></li>
+                    <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i>Crear</a></li>
+                </ul>
+            </navbar>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <label for="eliminar_t">Elige tarea </label><br>
+                    <select id="eliminar_t" name="eliminar_t" required>
+                        <option value="">Tare 1</option>
+                    </select><br>
+                </fieldset>
+                <button class="boton" type="button" onclick="borrarTarea()"><a href="proyecto.html">Eliminar</a></button>
+            </form>
+        </main>
+        <script src="crearProyecto.js"></script>
+    </body>
+</html>

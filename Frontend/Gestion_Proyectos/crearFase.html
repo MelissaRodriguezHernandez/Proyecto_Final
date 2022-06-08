@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/O_imagen_pestaña.png">
+        <link href="css/crearFase.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="crearProyecto.js"></script>
+        <title>Añadir Fase</title>
+    </head>
+    <body>
+        <header>
+            <navbar>
+                <ul>
+                    <li class="marca"><a href="home.html">ONYX</a></li>
+                    <li class="cuenta"><a href="#"><i class="icon icon-user-circle-o"></i></a></li>
+                    <li class="contacto"><a href="#">Contacto</a></li>
+                    <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i></a></li>
+                </ul>
+            </navbar>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend><h1>Añadir fases</h1></legend>
+                    <label for="nombre_fase">Nombre de la fase</label><br>
+                    <input type="text" id="nombre_fase" name="nombre_fase" minlength="10" maxlength="20" required><br><br>
+                    <label for="descripcion_fase">Descripción</label><br>
+                    <input type="text" id="descripcion_fase" name="descripcion_fase" maxlength="45" minlength="10" required><br><br>
+                    <label for="fecha_inicio_fase">Fecha de inicio</label><br>
+                    <input type="date" id="fecha_inicio_fase" name="fecha_inicio_fase" required><br><br>
+                    <label for="fehca_final_fase">Fecha final</label><br>
+                    <input type="date" id="fehca_final_fase" name="fehca_final_fase" required><br><br>
+                    </select><br><br><br>
+                </fieldset>
+                <button class="boton" type="button" onclick="fase()"><a href="proyecto.html">Añadir Fase</a></button>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/O_imagen_pestaña.png">
+        <link href="css/documento.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <title>ONYX</title>
+    </head>
+    <body onload="cargarDocu()">
+        <main>
+            <h2>ONYX</h2>
+            <div>
+                <h5 class="info"><i class="icon icon-table"></i>  Información  <i class="icon icon-table"></i></h5>
+            </div>
+            <div id="participantes_doc">
+                <h5><i class="icon icon-users"></i>Participantes</h5>
+                <h6> | ID | Nombre | Apellidos |</h6>
+            </div>
+            <div id="fases_doc">
+                <h5><i class="icon icon-sitemap"></i>Fases</h5>
+                <h6> | ID | Nombre | Estado | Fecha Inicio | Fecha Final |</h6>
+            </div>
+            <div id="tareas_doc">
+                <h5>Tareas</h5>
+                <h6> | ID | Nombre | Estado | Fecha Entrega | ID Participante | ID fase |</h6>
+            </div>
+        </main>
+        <script type="text/javascript" src="crearProyecto.js"></script>
+    </body>
+</html>
