@@ -16,8 +16,8 @@ public class BBDD {
 	 static String idProyectoActual;
 	
 	 /**
-	     * Pasamos por parametro la informaciÛn que ha introducido el usuario en el formulario de registro y
-	     * ejecutamos un query en nuestra base de datos en la tabla de usuarios para insertar toda esta informaciÛn
+	     * Pasamos por parametro la informaci√≥n que ha introducido el usuario en el formulario de registro y
+	     * ejecutamos un query en nuestra base de datos en la tabla de usuarios para insertar toda esta informaci√≥n
 	     * @param id
 	     * @param nombre
 	     * @param apellidos
@@ -30,7 +30,7 @@ public class BBDD {
 	    public static boolean insertUsuario(String id, String nombre, String apellidos, String email, String contrasena ) throws SQLException, ClassNotFoundException {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        String url = "jdbc:mysql://localhost:3306/proyecto";
-	        String query = "INSERT INTO usuario (id, nombre, apellidos, email, contraseÒa) VALUES ('"+id+"','"+nombre+"','"+apellidos+"','"+email+"','"+contrasena+"')";
+	        String query = "INSERT INTO usuario (id, nombre, apellidos, email, contrase√±a) VALUES ('"+id+"','"+nombre+"','"+apellidos+"','"+email+"','"+contrasena+"')";
 	        Connection con = DriverManager.getConnection(url, "root", "mysql");
 	        Statement st = con.createStatement();
 
@@ -56,7 +56,7 @@ public class BBDD {
 
 	    /**
 	     * Metodo que selecciona todas las filas de la tabla usuario de la base de datos, fila por fila
-	     * va creando un nuevo objeto persona con la informaciÛn y lo mete en un arraylist de personas.
+	     * va creando un nuevo objeto persona con la informaci√≥n y lo mete en un arraylist de personas.
 	     * Resumidamente metemos en un arraylist todas los usuarios de la base de datos para usarla posteriormente en otros metodos
 	     * @return listaPersonas
 	     * @throws ClassNotFoundException
@@ -80,7 +80,7 @@ public class BBDD {
 	                String nombre = rs.getString("nombre");
 	                String apellidos = rs.getString("apellidos");
 	                String email = rs.getString("email");
-	                String contrasena = rs.getString("contraseÒa");
+	                String contrasena = rs.getString("contrase√±a");
 	                listaPersonas.add(new Persona(id, nombre, apellidos, email, contrasena));
 
 	            }
@@ -92,7 +92,7 @@ public class BBDD {
 	    
 	    /**
 	     *Metodo que selecciona todas las filas de la tabla proyecto de la base de datos, fila por fila
-	     * va creando un nuevo objeto proyecto con la informaciÛn y lo mete en un arraylist de proyectos.
+	     * va creando un nuevo objeto proyecto con la informaci√≥n y lo mete en un arraylist de proyectos.
 	     * Resumidamente metemos en un arraylist todas los proyectos de la base de datos para usarla posteriormente en otros metodos
 	     * @return
 	     * @throws ClassNotFoundException
@@ -219,8 +219,8 @@ public class BBDD {
 	    }
 	    
 	    /**
-	     *Seleccionamos toda la informaciÛn en la base de datos del proyecto seleccionado para luego incrustarlo en un html 
-	     *este metodo devolvera un String que contendra el html que se enviara de vuelta a la p·gina web
+	     *Seleccionamos toda la informaci√≥n en la base de datos del proyecto seleccionado para luego incrustarlo en un html 
+	     *este metodo devolvera un String que contendra el html que se enviara de vuelta a la p√°gina web
 	     * @return
 	     * @throws ClassNotFoundException
 	     * @throws SQLException
@@ -252,7 +252,7 @@ public class BBDD {
 
 	    
 	    /**
-	     *Metodo que insertara un nuevo proyecto en la base de datos con toda la informaciÛn pasada por parametro
+	     *Metodo que insertara un nuevo proyecto en la base de datos con toda la informaci√≥n pasada por parametro
 	     * @param id
 	     * @param nombre
 	     * @param idDirector
@@ -277,9 +277,9 @@ public class BBDD {
 	    }
 
 	    /**
-	     *Metodo que aÒadira una fase a la base de datos con la informaciÛn pasada por parametro
-	     *el id del proyecto ser· el del abierto por el usuario
-	     *La fase se aÒade dentro de un proyecto ya creado
+	     *Metodo que a√±adira una fase a la base de datos con la informaci√≥n pasada por parametro
+	     *el id del proyecto ser√° el del abierto por el usuario
+	     *La fase se a√±ade dentro de un proyecto ya creado
 	     *Cada vez que elegimos y abrimos un proyecto cogemos el id del proyecto y lo almacenamos en atributo estatico
 	     *para luego utilizarlo en otros metodos
 	     * @param idProyecto
@@ -306,7 +306,7 @@ public class BBDD {
 	    }
 
 	    /**
-	     *Metodo que aÒadira un usuario (el id se pasa por parametro) a la tabla de grupo de los participantes en el proyecto
+	     *Metodo que a√±adira un usuario (el id se pasa por parametro) a la tabla de grupo de los participantes en el proyecto
 	     *Otra vez el id del proyecto se coje del atributo estatico
 	     * @param idUsuario
 	     * @throws ClassNotFoundException
@@ -353,9 +353,9 @@ public class BBDD {
 	    
 	    /**
 	     * Este metodo carga todas las fases de un proyecto para mostrarlas 
-	     * en los formularios de aÒadir tareas 
+	     * en los formularios de a√±adir tareas 
 	     * Otra vez el id del proyecto se coje del atributo estatico
-	     * devolvera un String con el html que se incrustara en la p·gina web
+	     * devolvera un String con el html que se incrustara en la p√°gina web
 	     * @return
 	     * @throws ClassNotFoundException
 	     * @throws SQLException
@@ -379,9 +379,9 @@ public class BBDD {
 	    
 	   /**
 	    *  Este metodo carga todas los participantes de un proyecto para mostrarlos 
-	     * en los formularios de aÒadir tareas
+	     * en los formularios de a√±adir tareas
 	     * Otra vez el id del proyecto se coje del atributo estatico
-	     * devolvera un String con el html que se incrustara en la p·gina web
+	     * devolvera un String con el html que se incrustara en la p√°gina web
 	    * @return
 	    * @throws ClassNotFoundException
 	    * @throws SQLException
@@ -404,7 +404,7 @@ public class BBDD {
 	    }
 
 	    /**
-	     *Metodo que aÒadira una tarea nueva a la base de datos con toda la informaacion pasada por parametro
+	     *Metodo que a√±adira una tarea nueva a la base de datos con toda la informaacion pasada por parametro
 	     *Otra vez el id del proyecto se coje del atributo estatico
 	     * @param idFase
 	     * @param nombre
@@ -429,9 +429,9 @@ public class BBDD {
 	    }
 	    
 	    /**
-	     *Metodo para cojer toda la informaciÛn de todas las tareas de un proyecto en la base de datos
-	     *Retornara un String con la informaciÛn incrustada en un html, 
-	     *el cual se enviara a la p·gina web
+	     *Metodo para cojer toda la informaci√≥n de todas las tareas de un proyecto en la base de datos
+	     *Retornara un String con la informaci√≥n incrustada en un html, 
+	     *el cual se enviara a la p√°gina web
 	     * @return
 	     * @throws ClassNotFoundException
 	     * @throws SQLException
@@ -456,9 +456,9 @@ public class BBDD {
 	    }
 
 	    /**
-	     *Metodo para cojer toda la informaciÛn de todos los participantes de un proyecto en la base de datos
-	     *Retornara un String con la informaciÛn incrustada en un html, 
-	     *el cual se enviara a la p·gina web
+	     *Metodo para cojer toda la informaci√≥n de todos los participantes de un proyecto en la base de datos
+	     *Retornara un String con la informaci√≥n incrustada en un html, 
+	     *el cual se enviara a la p√°gina web
 	     * @return
 	     * @throws ClassNotFoundException
 	     * @throws SQLException
@@ -483,9 +483,9 @@ public class BBDD {
 	    }
 
 	    /**
-	     *Metodo para cojer toda la informaciÛn de todas las fases de un proyecto en la base de datos
-	     *Retornara un String con la informaciÛn incrustada en un html, 
-	     *el cual se enviara a la p·gina web
+	     *Metodo para cojer toda la informaci√≥n de todas las fases de un proyecto en la base de datos
+	     *Retornara un String con la informaci√≥n incrustada en un html, 
+	     *el cual se enviara a la p√°gina web
 	     * @return
 	     * @throws ClassNotFoundException
 	     * @throws SQLException
@@ -510,10 +510,10 @@ public class BBDD {
 	    }
 	    
 	    /**
-	     *Metodo que cojera la informaciÛn de las fases y tareas donde partcicpa el usuario logueado
+	     *Metodo que cojera la informaci√≥n de las fases y tareas donde partcicpa el usuario logueado
 	     *por cada fase llamara al metodo infoTareaUsuario, al cual se le mandara por parametro la fase para obetener
 	     *cada tarea que tiene endiente el usuario en esa fase
-	     *El metodo devuele un String que contiene toda la  informaciÛn incrustada en un html que se enviara a la p·gina web
+	     *El metodo devuele un String que contiene toda la  informaci√≥n incrustada en un html que se enviara a la p√°gina web
 	     * @return
 	     * @throws ClassNotFoundException
 	     * @throws SQLException
@@ -541,7 +541,7 @@ public class BBDD {
 	    /**
 	     *Metodo que a traves de un id de fase pasado por parametro devuelve todas las tareas que tiene 
 	     *el usuario actual pendiente en la fase
-	     *Devuelve un String de la infromaciÛn con html incrustado
+	     *Devuelve un String de la infromaci√≥n con html incrustado
 	     * @param idFase
 	     * @return
 	     * @throws ClassNotFoundException
@@ -559,7 +559,7 @@ public class BBDD {
 	        ResultSet rs= st.executeQuery(query);
 
 	        while(rs.next()) {
-	            resultado = resultado + "<h4 id="+rs.getString("idTarea")+">"+rs.getString("nombre")+" | entrega : "+rs.getString("fechaEntrega")+"<i class=\"icon icon-square-o\" onclick=\"actualizarEstadoTarea("+rs.getString("idTarea")+", "+idFase+")\"></i><br><span> DescripciÛn | "+rs.getString("descripcion")+"</span></h4>";
+	            resultado = resultado + "<h4 id="+rs.getString("idTarea")+">"+rs.getString("nombre")+" | entrega : "+rs.getString("fechaEntrega")+"<i class=\"icon icon-square-o\" onclick=\"actualizarEstadoTarea("+rs.getString("idTarea")+", "+idFase+")\"></i><br><span> Descripci√≥n | "+rs.getString("descripcion")+"</span></h4>";
 	        }
 
 	        return resultado;
@@ -592,7 +592,7 @@ public class BBDD {
 
 	    /**
 	     *Metodo que selecciona todas las filas de la tabla reclamacion de la base de datos, fila por fila
-	     * va creando un nuevo objeto reclamacion con la informaciÛn y lo mete en un arraylist de reclamaciones.
+	     * va creando un nuevo objeto reclamacion con la informaci√≥n y lo mete en un arraylist de reclamaciones.
 	     * Resumidamente metemos en un arraylist todas las reclamaciones de la base de datos para usarla posteriormente en otros metodos
 	     * @return
 	     * @throws ClassNotFoundException
@@ -632,7 +632,7 @@ public class BBDD {
 
 	    /**
 	     *Metodo que actualiza el estado de un proyecto a En proceso.
-	     *Este es llamado cuando se aÒade la primera fase del proyecto
+	     *Este es llamado cuando se a√±ade la primera fase del proyecto
 	     * @throws ClassNotFoundException
 	     * @throws SQLException
 	     */
@@ -997,7 +997,7 @@ public class BBDD {
 	        Statement st = con.createStatement();
 	        ResultSet rs= st.executeQuery(query);
 
-	        resultado = "<h5> Partcipantes </h5> <h6> | ID | Nombre | Estado | Fecha Entrega | ID Persona Asiganda | ID Fase | <h6>";
+	        resultado = "<h5> Tareas </h5> <h6> | ID | Nombre | Estado | Fecha Entrega | ID Persona Asiganda | ID Fase | <h6>";
 
 	        while(rs.next()) {
 	            resultado = resultado + "<h6>"+rs.getString("idTarea")+" : "+rs.getString("nombre")+" : "+rs.getString("estado")+ " : "+rs.getString("fechaEntrega")+ " : "+rs.getString("idUsuario")+ " : "+rs.getString("idFase")+"</h6>";
