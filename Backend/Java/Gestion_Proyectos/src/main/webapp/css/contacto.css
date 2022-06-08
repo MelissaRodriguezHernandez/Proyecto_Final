@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+html{
+    background: linear-gradient(to right, #5f5fcb, #41c2ea, #a364e5);
+    margin:0;
+}
+
+header{
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #171616;
+    border-radius: 10px;
+}
+
+li {
+    float: left;
+    font-size: 1.5em;
+    font-family: 'Alice', serif;
+    border-radius: 12px;
+    margin: 0.10%;
+}
+
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.marca{
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 2px #8dcfff,
+    1px 1px #3f45ff, 2px 2px 2px #d42eff,
+    -1px -1px 2px #f15808;
+}
+
+.cuenta{
+    float: right;
+}
+.contacto{
+    float: right;
+}
+
+
+legend > h1{
+    font-family: 'Alice', serif;
+    font-size: 3em;
+    margin:0 auto;
+    color: rgba(0, 0, 0, 0.91);
+    text-shadow: rgba(0, 0, 0, 0.35) 0.1em 0.1em 0.1em;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 30% ;
+    height: auto;
+    margin: 2% auto;
+    font-family: 'Alice', serif;
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius: 1em;
+    box-shadow: 0 5px #424242;
+    border: none;
+    padding: 2%;
+}
+
+fieldset > label{
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+    font-family: 'Alice', serif;
+    font-weight: bold;
+}
+
+fieldset > input{
+    font-size: 1.3em;
+    border-radius: 0.3em;
+    background-color: rgba(255, 255, 255, 0.35);
+    float:left;
+    color: rgba(56, 56, 56, 0.85);
+    font-family: 'Alice', serif;
+}
+
+fieldset > select{
+	font-size: 1.3em;
+    border-radius: 0.3em;
+    background-color: rgba(255, 255, 255, 0.35);
+    font-family: 'Alice', serif;
+    float:left;
+}
+
+.boton_s{
+    background-color: #4949ec;
+    color: white;
+    border-color: #4949ec;
+    font-size: 1.3em;
+    box-shadow: 0 5px rgba(73, 73, 236, 0.53);
+}
+
+.boton_s:hover{
+    font-size: 1.5em;
+    border-color: #4949ec;
+    color: #4949ec;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#texto{
+    border-radius: 1em;
+}
+
+textarea{
+    border-radius: 0.3em;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a :hover{
+    color: #4949ec;
+}

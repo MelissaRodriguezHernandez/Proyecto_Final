@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+html{
+    background: linear-gradient(to right, #5f5fcb, #41c2ea, #a364e5);
+}
+
+/*@media only screen and (max-width: 600px) {}
+@media (min-width: 601px) {}*/
+
+@media only screen and (max-width: 600px) {
+
+    main{
+        width: 90%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.56);
+        box-shadow: 0 5px #424242;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        margin: 2% auto;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Alice', serif;
+        background-color: #41c2ea;
+        border-radius: 1em;
+        box-shadow: 0 5px #33a1c4;
+        border: solid 2px #33a1c4;
+        margin: 1%;
+        padding: 1%;
+    }
+
+    h4{
+        font-size: 1.5em;
+        font-family: 'Alice', serif;
+        padding: 2%;
+        color: black;
+    }
+
+    .cerrar :hover{
+        background-color: rgba(96, 96, 96, 0.42);
+        font-size: 1em;
+        border-radius: 1em;
+        padding: 1%;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+@media (min-width: 601px) {
+    main{
+        width: 30%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.56);
+        box-shadow: 0 5px #424242;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        margin: 2% auto;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Alice', serif;
+        background-color: #41c2ea;
+        border-radius: 1em;
+        box-shadow: 0 5px #33a1c4;
+        border: solid 2px #33a1c4;
+        margin: 1%;
+        padding: 1%;
+    }
+
+    h4{
+        font-size: 1.5em;
+        font-family: 'Alice', serif;
+        padding: 2%;
+        color: black;
+    }
+
+    .cerrar :hover{
+        background-color: rgba(96, 96, 96, 0.42);
+        font-size: 1em;
+        border-radius: 1em;
+        padding: 1%;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+
+
+}
+
+header{
+    width: 97%;
+    height: auto;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #171616;
+    border-radius: 10px;
+}
+
+li {
+    float: left;
+    font-size: 1.5em;
+    font-family: 'Alice', serif;
+    border-radius: 1em;
+    margin: 0.10%;
+}
+
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.marca{
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 2px #8dcfff,
+    1px 1px #3f45ff, 2px 2px 2px #d42eff,
+    -1px -1px 2px #f15808;
+}
+
+.cuenta{
+    float: right;
+}
+.contacto{
+    float: right;
+}

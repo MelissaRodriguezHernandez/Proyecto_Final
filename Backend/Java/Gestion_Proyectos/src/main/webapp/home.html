@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/O_imagen_pestaña.png">
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>ONYX</title>
+</head>
+<body onload="cargar()">
+    <header>
+        <navbar>
+            <ul>
+                <li class="marca"><a href="home.html">ONYX</a></li>
+                <li class="cuenta"><a href="cuenta.html"><i class="icon icon-user-circle-o"></i></a></li>
+                <li class="contacto"><a href="contacto.html">Contacto</a></li>
+                <li class="crear_proyecto"><a href="creacionProyecto.html"><i class="icon icon-plus-circle"></i>Crear</a></li>
+            </ul>
+        </navbar>
+    </header>
+    <main>
+        <section>
+            <div class="trabajos_director" id="trabajos_propios">
+                <h2>Proyectos propios</h2>
+                <div onclick="enviaridProyecto()" ><a href="proyecto.html"><h3>Nombre <span >007</span>| Tipo | Estado |</h3></a></div>
+            </div>
+            <div class="trabajos_participante" id="trabajos_participante">
+                <h2>Proyectos participando</h2>
+                <div><h3>No hay proyectos</h3></div>              
+            </div>
+        </section>
+    </main>
+     <script type="text/javascript" src="js.js"></script>
+</body>
+</html>
